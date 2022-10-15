@@ -1,10 +1,322 @@
 [
     {
+        "id": "15d116719dd4175d",
+        "type": "tab",
+        "label": "Go1 RGB LED",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "f6f2187d.f17ca8",
         "type": "tab",
         "label": "Go1 Basic MQTT",
         "disabled": false,
         "info": ""
+    },
+    {
+        "id": "dbac16e7f392bc82",
+        "type": "tab",
+        "label": "Go1 LED Color Picker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9f3b2a7763ee426e",
+        "type": "mqtt-broker",
+        "name": "Go1 MQTT",
+        "broker": "192.168.12.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "19e1cb2c45464c32",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "LED Color Picker Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a67ba41c33b18f8a",
+        "type": "ui_tab",
+        "name": "Go1 Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ec66e4dbc7962791",
+        "type": "ui_group",
+        "name": "Color Picker",
+        "tab": "a67ba41c33b18f8a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "79c6eb316cbb7fce",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.12.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "19ab10873e952fa7",
+        "type": "inject",
+        "z": "15d116719dd4175d",
+        "name": "red",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "child_conn.send('change_light(255,0,0)')",
+        "payloadType": "str",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "c3b5c5583ecb8696",
+                "b02878b7e1a79fc3"
+            ]
+        ]
+    },
+    {
+        "id": "df40748913990629",
+        "type": "inject",
+        "z": "15d116719dd4175d",
+        "name": "green",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "child_conn.send('change_light(0,255,0)')",
+        "payloadType": "str",
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "c3b5c5583ecb8696",
+                "b02878b7e1a79fc3"
+            ]
+        ]
+    },
+    {
+        "id": "0b416bebc2378561",
+        "type": "inject",
+        "z": "15d116719dd4175d",
+        "name": "blue",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "child_conn.send('change_light(0,0,255)')",
+        "payloadType": "str",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "c3b5c5583ecb8696",
+                "b02878b7e1a79fc3"
+            ]
+        ]
+    },
+    {
+        "id": "c3b5c5583ecb8696",
+        "type": "debug",
+        "z": "15d116719dd4175d",
+        "name": "log",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b02878b7e1a79fc3",
+        "type": "mqtt out",
+        "z": "15d116719dd4175d",
+        "name": "",
+        "topic": "programming/code",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79c6eb316cbb7fce",
+        "x": 670,
+        "y": 340,
+        "wires": []
     },
     {
         "id": "1d373428ba58488c",
@@ -83,30 +395,90 @@
         ]
     },
     {
-        "id": "9f3b2a7763ee426e",
-        "type": "mqtt-broker",
-        "name": "Go1 MQTT",
-        "broker": "192.168.12.1",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
+        "id": "d127fc4b18cd3b0d",
+        "type": "ui_colour_picker",
+        "z": "dbac16e7f392bc82",
+        "name": "",
+        "label": "LED Color",
+        "group": "ec66e4dbc7962791",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": true,
+        "showAlpha": false,
+        "showLightness": false,
+        "square": "true",
+        "dynOutput": "false",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "6b8040d81c62917b"
+            ]
+        ]
+    },
+    {
+        "id": "add55ff44d96d4a6",
+        "type": "debug",
+        "z": "dbac16e7f392bc82",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6b8040d81c62917b",
+        "type": "function",
+        "z": "dbac16e7f392bc82",
+        "name": "parseColor",
+        "func": "let color_command = { payload: `child_conn.send('change_light(${msg.payload.r},${msg.payload.g},${msg.payload.b})')` }\nreturn color_command;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 180,
+        "wires": [
+            [
+                "add55ff44d96d4a6",
+                "ebed015dc8053609"
+            ]
+        ]
+    },
+    {
+        "id": "ebed015dc8053609",
+        "type": "mqtt out",
+        "z": "dbac16e7f392bc82",
+        "name": "",
+        "topic": "programming/code",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
         "userProps": "",
-        "sessionExpiry": ""
+        "correl": "",
+        "expiry": "",
+        "broker": "79c6eb316cbb7fce",
+        "x": 810,
+        "y": 220,
+        "wires": []
     }
 ]
